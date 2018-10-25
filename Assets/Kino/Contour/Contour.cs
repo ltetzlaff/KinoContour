@@ -1,4 +1,4 @@
-﻿//
+//
 // KinoContour - Contour line effect
 //
 // Copyright (C) 2015 Keijiro Takahashi
@@ -128,7 +128,7 @@ namespace Kino
                 GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
         }
 
-        void OnRenderImage(RenderTexture source, RenderTexture destination)
+        public void ApplyEffect(RenderTexture source, RenderTexture destination)
         {
             if (_material == null)
             {
@@ -161,6 +161,11 @@ namespace Kino
                 _material.DisableKeyword("_CONTOUR_NORMAL");
 
             Graphics.Blit(source, destination, _material);
+        }
+
+        void OnRenderImage(RenderTexture source, RenderTexture destination)
+        {
+            ApplyEffect(source, destination);
         }
 
         #endregion
