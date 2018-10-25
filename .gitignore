@@ -13,3 +13,10 @@ Desktop.ini
 /Temp
 /UnityPackageManager
 /Packages
+
+# Included as a Git Submodule
+Assets.meta
+LICENSE*.meta
+README*.meta
+ProjectSettings.meta
+ProjectSettings/*.meta
