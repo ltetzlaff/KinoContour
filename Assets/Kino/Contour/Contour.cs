@@ -128,7 +128,7 @@ namespace Kino
                 GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
         }
 
-        public void ApplyEffect(RenderTexture source, RenderTexture destination)
+        public void ApplyEffect(Texture source, RenderTexture destination)
         {
             if (_material == null)
             {
